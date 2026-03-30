@@ -261,26 +261,28 @@ ul a{
         display: none;
     }
 
-    /* Panel: horizontal scroll, no wrapping */
+    /* Panel: single scrollable row - override flex layout */
     .panel {
-        flex-wrap: nowrap;
+        display: block;
         overflow-x: auto;
-        justify-content: flex-start;
         white-space: nowrap;
+        padding: 8px 10px;
     }
-    .panel-all {
-        flex-shrink: 0;
-        margin-right: 5px;
-    }
-    .panel-ops {
+    .panel-all,
+    .panel-ops,
+    .panel-deals {
+        display: inline;
         white-space: nowrap;
-        overflow-x: visible;
-        flex-shrink: 0;
         width: auto;
+        font-size: 0.85rem;
+    }
+    .panel-ops p {
+        display: inline;
+        margin-left: 12px;
     }
     .panel-deals {
-        flex-shrink: 0;
-        white-space: nowrap;
+        font-weight: 700;
+        margin-left: 12px;
     }
 
     /* Hero: reduce height for small screens */
