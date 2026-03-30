@@ -223,3 +223,22 @@ ul a{
 .copyright{
     padding-top: 5px;
 }
+
+/* This code only runs on screens smaller than 700px (like phones) */
+@media (max-width: 700px) {
+    .shop-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .box {
+        width: 90%; /* Makes boxes take up almost the full width of the phone */
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .navbar {
+        flex-wrap: wrap; /* Helps the header items wrap instead of disappearing */
+    }
+}
