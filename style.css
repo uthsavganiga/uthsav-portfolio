@@ -254,10 +254,10 @@ ul a{
         margin: 8px 0 4px;
     }
 
-    /* Hide address and sign-in/returns on mobile */
-    .add-icon,
-    .nav-sign,
-    .nav-returns {
+    /* Hide address, sign-in, and returns on mobile */
+    .nav-address,
+    .nav-signin,
+    .nav-return {
         display: none;
     }
 
