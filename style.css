@@ -238,7 +238,51 @@ ul a{
 }
 
 @media (max-width: 700px) {
-    /* Stack the footer links */
+    /* Navbar: let logo and cart sit on one line, search below */
+    .navbar {
+        justify-content: space-between;
+        padding: 8px 10px;
+    }
+
+    /* Search bar goes full width below logo/cart */
+    .nav-search {
+        order: 4;
+        width: 100%;
+        max-width: 100%;
+        margin: 8px 0 4px;
+    }
+
+    /* Hide less important nav items on mobile */
+    .add-icon,
+    .nav-returns {
+        display: none;
+    }
+
+    /* Panel: allow text to wrap instead of overflowing */
+    .panel-ops {
+        white-space: normal;
+        overflow-x: auto;
+    }
+
+    /* Hero: reduce height so it doesn't overwhelm small screens */
+    .hero-section {
+        height: 220px;
+        background-position: center;
+    }
+
+    /* Shop boxes: stack full width */
+    .box {
+        width: 95%;
+        height: auto;           /* Remove fixed height so content isn't clipped */
+        margin: 10px auto;
+    }
+
+    /* Box images: scale down proportionally */
+    .box-img {
+        height: 200px;
+    }
+
+    /* Footer links: stack vertically */
     .foot-panel2 {
         flex-direction: column;
         height: auto;
@@ -246,20 +290,9 @@ ul a{
         align-items: flex-start;
     }
 
-    /* Hide less important nav items on mobile to save space */
-    .add-icon, .nav-returns {
-        display: none; 
-    }
-
-    /* Make the search bar the full width on mobile */
-    .nav-search {
-        order: 2;
-        width: 100%;
-        margin: 10px 5px;
-    }
-    
-    .box {
-        width: 95%; /* Almost full width */
-        margin-top: 15px;
+    /* Footer bottom: allow text to wrap */
+    .foot-panel4 {
+        height: auto;
+        padding: 15px 10px;
     }
 }
