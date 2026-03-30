@@ -238,46 +238,49 @@ ul a{
 }
 
 @media (max-width: 700px) {
-    /* Navbar: let logo and cart sit on one line, search below */
+    /* Row 1: logo (left) + cart (right) */
     .navbar {
         justify-content: space-between;
         padding: 8px 10px;
     }
+    .nav-logo   { order: 1; }
+    .nav-cart   { order: 2; }
 
-    /* Search bar goes full width below logo/cart */
+    /* Row 2: search bar full width */
     .nav-search {
-        order: 4;
+        order: 3;
         width: 100%;
         max-width: 100%;
         margin: 8px 0 4px;
     }
 
-    /* Hide less important nav items on mobile */
+    /* Hide address and sign-in/returns on mobile */
     .add-icon,
+    .nav-sign,
     .nav-returns {
         display: none;
     }
 
-    /* Panel: allow text to wrap instead of overflowing */
+    /* Panel: allow text to wrap instead of overflow */
     .panel-ops {
         white-space: normal;
         overflow-x: auto;
     }
 
-    /* Hero: reduce height so it doesn't overwhelm small screens */
+    /* Hero: reduce height for small screens */
     .hero-section {
         height: 220px;
         background-position: center;
     }
 
-    /* Shop boxes: stack full width */
+    /* Shop boxes: stack full width, no fixed height */
     .box {
         width: 95%;
-        height: auto;           /* Remove fixed height so content isn't clipped */
+        height: auto;
         margin: 10px auto;
     }
 
-    /* Box images: scale down proportionally */
+    /* Box images: proportional height */
     .box-img {
         height: 200px;
     }
