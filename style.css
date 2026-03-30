@@ -261,10 +261,26 @@ ul a{
         display: none;
     }
 
-    /* Panel: allow text to wrap instead of overflow */
-    .panel-ops {
-        white-space: normal;
+    /* Panel: horizontal scroll, no wrapping */
+    .panel {
+        flex-wrap: nowrap;
         overflow-x: auto;
+        justify-content: flex-start;
+        white-space: nowrap;
+    }
+    .panel-all {
+        flex-shrink: 0;
+        margin-right: 5px;
+    }
+    .panel-ops {
+        white-space: nowrap;
+        overflow-x: visible;
+        flex-shrink: 0;
+        width: auto;
+    }
+    .panel-deals {
+        flex-shrink: 0;
+        white-space: nowrap;
     }
 
     /* Hero: reduce height for small screens */
