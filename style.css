@@ -4,10 +4,13 @@
     box-sizing: border-box;
 }
 .navbar{
-    height: 60px;
+    min-height: 60px;
+    height: auto;
     background-color: #0f1111;
     color: white;
+    padding: 5px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -45,9 +48,12 @@
     justify-content: space-evenly;
     display: flex;
     background-color: pink;
-    width: 620px;
+    width: 100%;
+    max-width: 620px;
     height: 40px;
     border-radius: 4px;
+    margin: 5px;
+    order: 3;
 }
 .search-select{
     border-top-left-radius: 4px;
@@ -96,12 +102,15 @@ span{
 
 /** panel **/
 .panel{
-    height: 40px;
+    min-height: 40px;
+    height: auto;
+    padding: 5px;
     background-color: #222f3d;
     display: flex;
+    flex-wrap: wrap;
     color: white;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
 }
 
 .panel-ops p{
@@ -109,7 +118,7 @@ span{
     margin-left: 10px;
 }
 .panel-ops {
-    width: 70%;
+    width: 100%;
     font-size: 0.85rem;
 }
 .panel-deals{
@@ -130,12 +139,16 @@ span{
 .hero-msg {
     background-color: white;
     color: black;
-    height: 40px;
+    min-height: 40px;
+    height: auto;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     font-size: 0.85rem;
-    width: 80%;
+    width: 90%;
+    margin-bottom: 20px;
 }
 .hero-msg a{
     color: #007185;
@@ -224,21 +237,29 @@ ul a{
     padding-top: 5px;
 }
 
-/* This code only runs on screens smaller than 700px (like phones) */
 @media (max-width: 700px) {
-    .shop-section {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .box {
-        width: 90%; /* Makes boxes take up almost the full width of the phone */
+    /* Stack the footer links */
+    .foot-panel2 {
+        flex-direction: column;
         height: auto;
-        margin-bottom: 20px;
+        padding: 20px;
+        align-items: flex-start;
     }
 
-    .navbar {
-        flex-wrap: wrap; /* Helps the header items wrap instead of disappearing */
+    /* Hide less important nav items on mobile to save space */
+    .add-icon, .nav-returns {
+        display: none; 
+    }
+
+    /* Make the search bar the full width on mobile */
+    .nav-search {
+        order: 2;
+        width: 100%;
+        margin: 10px 5px;
+    }
+    
+    .box {
+        width: 95%; /* Almost full width */
+        margin-top: 15px;
     }
 }
